@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express()
 const dir = __dirname + "/views/"
+require('dotenv').config();
 
 app.get("/", (req, res) => {
 res.sendFile(dir + "index.html")
@@ -14,4 +15,5 @@ res.sendFile(dir + "yes.html")
 }
 })
 
-app.listen(process.env.PORT)
+console.log("starting server: ", process.env.PASSWORD )
+app.listen(2000)
